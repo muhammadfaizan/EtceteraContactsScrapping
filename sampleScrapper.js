@@ -1,3 +1,4 @@
+(function() {
 var contacts = [];
 var prevScroll=0, nextScroll = 1;
 
@@ -55,3 +56,4 @@ var int = setInterval(function(){
   nextScroll = document.getElementById('pane-side').scrollTop;
 },1000);
 
+})();
