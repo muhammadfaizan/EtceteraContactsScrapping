@@ -26,7 +26,7 @@ var int = setInterval(function(){
     }
     if (contacts.length == 0)
     {
-
+    	console.log("You have no new contacts this week...")
     }
 
 	var pom = document.createElement('a');
