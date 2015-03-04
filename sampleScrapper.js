@@ -6,8 +6,11 @@ document.getElementById('pane-side').scrollTop = 0;
 
 
 var int = setInterval(function(){
-  if ( prevScroll == nextScroll){
-  	alert(JSON.stringify(contacts));
+
+	var latestElement = document.getElementsByClassName('chat-time')[0].innerHTML;
+	console.log(latestElement)
+  if ( prevScroll == nextScroll || /([\d]{1,2}\/){2}\d{4}/.test(latestElement) ){
+  	//alert(JSON.stringify(contacts));
     clearInterval(int);
     var finalVal = '';
 
@@ -19,6 +22,10 @@ var int = setInterval(function(){
         if (j > 0)
             finalVal += '\n';
         finalVal += result;
+    }
+    if (contacts.length == 0)
+    {
+
     }
 
 	var pom = document.createElement('a');
